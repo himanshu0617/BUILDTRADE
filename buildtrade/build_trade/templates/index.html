@@ -1,0 +1,531 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section" id="hero">
+    <div class="container">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Premium Building Materials for Your Projects</h1>
+                <p class="hero-subtitle">Your trusted partner for all construction materials. We provide high-quality products at competitive prices with reliable delivery.</p>
+                <div class="hero-buttons">
+                    <a href="#products" class="btn btn-primary">Explore Products</a>
+                    <a href="/contact" class="btn btn-outline">Contact Us</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://wordpress.bricknbolt.com/blogs-and-articles/wp-content/uploads/sites/2/2024/05/Building-materials-needed-to-build-a-house.webp" alt="Construction materials">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Product Categories Section -->
+<section class="product-categories-section" id="products">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Our Product Categories</h2>
+            <p class="section-subtitle">Browse through our extensive range of high-quality construction materials</p>
+        </div>
+        
+        <div class="tabs">
+            <div class="tabs-header">
+                {% for category in categories %}
+                <button class="tab-button {% if loop.first %}active{% endif %}" data-tab="{{ category.id }}">
+                    {{ category.name }}
+                </button>
+                {% endfor %}
+            </div>
+            
+            <div class="tabs-content">
+                {% for category in categories %}
+                <div class="tab-content {% if loop.first %}active{% endif %}" id="tab-{{ category.id }}">
+                    <div class="product-grid">
+                        {% for product in products %}
+                            {% if product.category_id == category.id %}
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <img src="{{ product.image }}" alt="{{ product.name }}">
+                                    {% if product.badge %}
+                                    <span class="product-badge">{{ product.badge }}</span>
+                                    {% endif %}
+                                </div>
+                                <div class="product-details">
+                                    <span class="product-category">{{ product.category }}</span>
+                                    <h3 class="product-title">{{ product.name }}</h3>
+                                    <div class="product-footer">
+                                        <span class="product-price">{{ product.price }}</span>
+                                        <a href="/product/{{ product.id }}" class="product-link">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                    <div class="view-all-container">
+                        <a href="/products/{{ category.id }}" class="btn btn-outline">View All {{ category.name }}</a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Products Section -->
+<section class="featured-products-section" id="featured">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Featured Products</h2>
+            <p class="section-subtitle">Our most popular construction materials chosen by professionals</p>
+        </div>
+        
+        <div class="product-grid">
+            {% for product in products[:8] %}
+            <div class="product-card featured-card">
+                <div class="product-image">
+                    <img src="{{ product.image }}" alt="{{ product.name }}">
+                    {% if product.badge %}
+                    <span class="product-badge">{{ product.badge }}</span>
+                    {% endif %}
+                </div>
+                <div class="product-details">
+                    <span class="product-category">{{ product.category }}</span>
+                    <h3 class="product-title">{{ product.name }}</h3>
+                    <div class="product-footer">
+                        <span class="product-price">{{ product.price }}</span>
+                        <a href="/product/{{ product.id }}" class="product-link">View Details</a>
+                    </div>
+                    <button class="add-to-cart-btn">
+                        <i class="fas fa-shopping-cart"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Special Offers Section -->
+<section class="special-offers-section" id="offers">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Special Offers</h2>
+            <p class="section-subtitle">Take advantage of our limited-time deals and discounts on premium construction materials</p>
+        </div>
+        
+        <div class="offers-grid">
+            <div class="offer-card">
+                <div class="offer-header">
+                    <i class="fas fa-clock"></i>
+                    <h3 class="offer-title">Limited Time Offer</h3>
+                </div>
+                <p class="offer-description">Get 15% off on all AAC blocks and cement purchases. Valid until the end of the month.</p>
+                <div class="offer-highlight">
+                    <p class="offer-discount">15% OFF</p>
+                    <p class="offer-code">Use code: BUILD15</p>
+                </div>
+                <button class="btn btn-primary">Claim Offer</button>
+            </div>
+            
+            <div class="offer-card">
+                <div class="offer-header">
+                    <i class="fas fa-percentage"></i>
+                    <h3 class="offer-title">Bulk Purchase Discount</h3>
+                </div>
+                <p class="offer-description">Save up to 20% when you purchase construction materials in bulk quantities.</p>
+                <div class="offer-highlight">
+                    <p class="offer-discount">SAVE 20%</p>
+                    <p class="offer-code">Minimum order: ₹1000</p>
+                </div>
+                <button class="btn btn-primary">Get Quote</button>
+            </div>
+            
+            <div class="offer-card">
+                <div class="offer-header">
+                    <i class="fas fa-tags"></i>
+                    <h3 class="offer-title">Clearance Sale</h3>
+                </div>
+                <p class="offer-description">Up to 30% off on selected tiles, bath tubs, and hardware items. While stocks last.</p>
+                <div class="offer-highlight">
+                    <p class="offer-discount">UP TO 30% OFF</p>
+                    <p class="offer-code">Limited stock available</p>
+                </div>
+                <button class="btn btn-primary">Shop Now</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="about-section" id="about">
+    <div class="container">
+        <div class="about-content">
+            <div class="about-image">
+                <img src="https://thumbs.dreamstime.com/b/chennai-india-march-rd-world-trade-center-horizontal-shot-building-243707594.jpg" height="200px" width="1000px"  alt="About BuildTrade">
+            </div>
+            <div class="about-text">
+                <h2 class="section-title">About BuildTrade</h2>
+                <p class="about-description">With over 15 years of experience in the construction materials industry, BuildTrade has established itself as a trusted supplier for contractors, builders, and homeowners. We pride ourselves on offering premium quality products, competitive pricing, and exceptional customer service.</p>
+                
+                <div class="about-features">
+                    <div class="about-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h3 class="feature-title">Quality Assurance</h3>
+                            <p class="feature-description">All our products undergo rigorous quality checks to ensure they meet industry standards.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="about-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h3 class="feature-title">Timely Delivery</h3>
+                            <p class="feature-description">We understand the importance of deadlines in construction projects and ensure on-time delivery.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="about-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h3 class="feature-title">Expert Consultation</h3>
+                            <p class="feature-description">Our team of experts provides guidance on selecting the right materials for your specific needs.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="about-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h3 class="feature-title">Nationwide Distribution</h3>
+                            <p class="feature-description">With our extensive network, we can deliver materials to construction sites across the country.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="/about" class="btn btn-primary">Learn More About Us</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section class="services-section" id="services">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Our Services</h2>
+            <p class="section-subtitle">We offer a range of services to make your construction experience seamless</p>
+        </div>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-truck"></i>
+                </div>
+                <h3 class="service-title">Delivery Services</h3>
+                <p class="service-description">We offer reliable and timely delivery of construction materials to your project site, ensuring you never face delays.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-box"></i>
+                </div>
+                <h3 class="service-title">Material Packaging</h3>
+                <p class="service-description">Our products are properly packaged to ensure they reach you in perfect condition, ready for immediate use.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <h3 class="service-title">Customer Support</h3>
+                <p class="service-description">Our dedicated customer support team is available to assist you with any queries or concerns regarding your orders.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-calculator"></i>
+                </div>
+                <h3 class="service-title">Material Estimation</h3>
+                <p class="service-description">We provide accurate material estimation services to help you determine the exact quantities needed for your project.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <h3 class="service-title">Installation Support</h3>
+                <p class="service-description">Our team can connect you with certified professionals for proper installation of specialized materials.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3 class="service-title">Quality Guarantee</h3>
+                <p class="service-description">All our products come with a quality guarantee, ensuring peace of mind for your construction projects.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Project Showcase Section -->
+<section class="projects-section" id="projects">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Our Projects</h2>
+            <p class="section-subtitle">Explore some of the major construction projects we've supplied materials for</p>
+        </div>
+        
+        <div class="project-showcase">
+            <div class="project-slider">
+                <div class="project-slide active" id="project-1">
+                    <div class="project-image">
+                        <img src="https://legacypartners.com/wp-content/uploads/la-1537506164-2yi4aytstp-snap-image.jpeg" alt="Luxury Apartment Complex">
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Luxury Apartment Complex</h3>
+                        <p class="project-description">Supplied premium construction materials for a 200-unit luxury apartment complex.</p>
+                        
+                        <div class="project-details">
+                            <div class="project-detail">
+                                <span class="detail-label">Location:</span>
+                                <span class="detail-value">Mumbai, Maharashtra</span>
+                            </div>
+                            
+                            <div class="project-detail">
+                                <span class="detail-label">Materials Supplied:</span>
+                                <div class="materials-tags">
+                                    <span class="material-tag">AAC Blocks</span>
+                                    <span class="material-tag">TMT Steel</span>
+                                    <span class="material-tag">Marble Flooring</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-slide" id="project-2">
+                    <div class="project-image">
+                        <img src="data:image/jpeg;base64,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" height="600px" width="600px" alt="Modern Office Building">
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Modern Office Building</h3>
+                        <p class="project-description">Provided high-quality materials for a 15-story commercial office building.</p>
+                        
+                        <div class="project-details">
+                            <div class="project-detail">
+                                <span class="detail-label">Location:</span>
+                                <span class="detail-value">Bengaluru, Karnataka</span>
+                            </div>
+                            
+                            <div class="project-detail">
+                                <span class="detail-label">Materials Supplied:</span>
+                                <div class="materials-tags">
+                                    <span class="material-tag">Glass Panels</span>
+                                    <span class="material-tag">Steel Beams</span>
+                                    <span class="material-tag">Ceramic Tiles</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-slide" id="project-3">
+                    <div class="project-image">
+                        <img src="https://www.constructionworld.in/assets/uploads/5420c834319e02962a9e6c267984e71e74ce.webp" alt="Residential Housing Development">
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Residential Housing Development</h3>
+                        <p class="project-description">Supplied materials for a 50-home residential development project.</p>
+                        
+                        <div class="project-details">
+                            <div class="project-detail">
+                                <span class="detail-label">Location:</span>
+                                <span class="detail-value">Ahmedabad, Gujarat</span>
+                            </div>
+                            
+                            <div class="project-detail">
+                                <span class="detail-label">Materials Supplied:</span>
+                                <div class="materials-tags">
+                                    <span class="material-tag">AAC Blocks</span>
+                                    <span class="material-tag">Sand</span>
+                                    <span class="material-tag">Hardware Items</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-slide" id="project-4">
+                    <div class="project-image">
+                        <img src="https://media.bizj.us/view/img/12768448/sofitel-hotel-1*900xx2667-1500-396-0.jpg" alt="Luxury Hotel Renovation">
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Luxury Hotel Renovation</h3>
+                        <p class="project-description">Provided premium bath fixtures and tiles for a 5-star hotel renovation.</p>
+                        
+                        <div class="project-details">
+                            <div class="project-detail">
+                                <span class="detail-label">Location:</span>
+                                <span class="detail-value">Delhi, UT</span>
+                            </div>
+                            
+                            <div class="project-detail">
+                                <span class="detail-label">Materials Supplied:</span>
+                                <div class="materials-tags">
+                                    <span class="material-tag">Bath Tubs</span>
+                                    <span class="material-tag">Tappees</span>
+                                    <span class="material-tag">Marble Tiles</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-controls">
+                <button class="project-control prev" id="project-prev">
+                    <i class="fas fa-chevron-left"></i> Previous
+                </button>
+                <div class="project-indicators">
+                    <button class="project-indicator active" data-project="project-1"></button>
+                    <button class="project-indicator" data-project="project-2"></button>
+                    <button class="project-indicator" data-project="project-3"></button>
+                    <button class="project-indicator" data-project="project-4"></button>
+                </div>
+                <button class="project-control next" id="project-next">
+                    Next <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="testimonials-section" id="testimonials">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">What Our Clients Say</h2>
+            <p class="section-subtitle">Don't just take our word for it - hear from our satisfied customers</p>
+        </div>
+        
+        <div class="testimonials-slider">
+            <div class="testimonials-wrapper" id="testimonials-wrapper">
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <img src="data:image/png;base64,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" alt="Vivek Tiwari">
+                        </div>
+                        <div class="testimonial-author">
+                            <h3 class="author-name">Vivek Tiwari</h3>
+                            <p class="author-position">Construction Manager, ABC Builders</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">BuildTrade has been our go-to supplier for construction materials for the past 5 years. Their quality products and reliable delivery have helped us complete numerous projects on time.</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <img src="data:image/png;base64,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" alt="Avneet Kaur">
+                        </div>
+                        <div class="testimonial-author">
+                            <h3 class="author-name">Avneet Kaur</h3>
+                            <p class="author-position">Architect, Modern Designs</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">I've recommended BuildTrade to all my clients. Their extensive range of high-quality materials and excellent customer service make them stand out in the industry.</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <img src="data:image/png;base64,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" alt="Ayush Anand">
+                        </div>
+                        <div class="testimonial-author">
+                            <h3 class="author-name">Ayush Anand</h3>
+                            <p class="author-position">Independent Contractor, Brown Construction</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">As an independent contractor, I value suppliers who provide quality materials at competitive prices. BuildTrade has consistently met my expectations and helped me deliver quality work to my clients.</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOOMp-YjdIknV8KuBLt5V1eSR6szXoq7CTsQ&s" alt="Swapnil Singh">
+                        </div>
+                        <div class="testimonial-author">
+                            <h3 class="author-name">Swapnil Singh</h3>
+                            <p class="author-position">Project Manager, Davis & Associates</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">The team at BuildTrade understands the importance of timely delivery in construction projects. Their reliable service has helped us avoid costly delays on multiple occasions.</p>
+                </div>
+            </div>
+            
+            <div class="testimonial-controls">
+                <button class="testimonial-control" id="testimonial-prev">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="testimonial-pagination" id="testimonial-pagination">
+                    <button class="pagination-dot active" data-index="0"></button>
+                    <button class="pagination-dot" data-index="1"></button>
+                    <button class="pagination-dot" data-index="2"></button>
+                    <button class="pagination-dot" data-index="3"></button>
+                </div>
+                <button class="testimonial-control" id="testimonial-next">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-content">
+            <h2 class="cta-title">Ready to Start Your Construction Project?</h2>
+            <p class="cta-text">Contact us today for a free consultation and quote on your construction material needs.</p>
+            <div class="cta-buttons">
+                <a href="/contact" class="btn btn-primary" >Contact Us</a>
+                <a href="tel:+917894561200" class="btn btn-outline">Call Now: 7894561200</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/home.js') }}"></script>
+{% endblock %}
+

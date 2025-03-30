@@ -1,0 +1,311 @@
+[
+  {
+    "id": 1,
+    "name": "Premium AAC Blocks",
+    "category": "AAC Blocks",
+    "category_id": "aac-blocks",
+    "price": "\u20B9120/m³",
+    "image": "https://5.imimg.com/data5/JY/AO/MY-2086163/lightweight-block.jpg",
+    "badge": "Best Seller",
+    "description": "High-quality AAC blocks with excellent thermal insulation properties. Perfect for  lightweight, ease of handling, excellent thermal and sound insulation, fire resistance, and durability,",
+    "features": [
+      "Lightweight and easy to handle",
+      "Excellent thermal insulation",
+      "Fire resistant",
+      "Sound insulation",
+      "Environmentally friendly"
+    ],
+    "specifications": {
+      "Dimensions": "600mm x 200mm x 100mm",
+      "Density": "550-650 kg/m³",
+      "Compressive Strength": "3.5-4.0 N/mm²",
+      "Thermal Conductivity": "0.16-0.18 W/mK"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Standard AAC Block",
+    "category": "AAC Blocks",
+    "category_id": "aac-blocks",
+    "price": "\u20B9100/m³",
+    "image": "https://www.ny-engineers.com/hubfs/autoclavedaeratedconcrete.jpg" ,
+    "description": "Standard AAC blocks for general construction purposes. Provides good thermal insulation and is easy to work with.",
+    "features": [
+      "Lightweight construction",
+      "Good thermal properties",
+      "Easy to cut and shape",
+      "Reduces construction time"
+    ],
+    "specifications": {
+      "Dimensions": "600mm x 200mm x 150mm",
+      "Density": "600-700 kg/m³",
+      "Compressive Strength": "3.0-3.5 N/mm²",
+      "Thermal Conductivity": "0.18-0.20 W/mK"
+    }
+  },
+  {
+    "id": 3,
+    "name": "TMT Steel Bars",
+    "category": "Iron & Steel",
+    "category_id": "iron",
+    "price": "\u20B985/quintal",
+    "image": "https://5.imimg.com/data5/QH/CP/MY-66019714/tmt-mild-steel-250x250.jpg",
+    "badge": "New",
+    "description": "High-strength Thermo-Mechanically Treated (TMT) steel bars for reinforced concrete structures.",
+    "features": [
+      "High tensile strength",
+      "Excellent ductility",
+      "Superior bonding with concrete",
+      "Earthquake resistant",
+      "Corrosion resistant"
+    ],
+    "specifications": {
+      "Diameter": "8mm, 10mm, 12mm, 16mm, 20mm, 25mm",
+      "Grade": "Fe 500D",
+      "Yield Strength": "500 N/mm²",
+      "Elongation": "≥ 16%"
+    }
+  },
+  {
+    "id": 4,
+    "name": "MS Angle Iron",
+    "category": "Iron & Steel",
+    "category_id": "iron",
+    "price": "\u20B995/piece",
+    "image": "https://cpimg.tistatic.com/05219278/b/4/MS-Angles.jpg",
+    "description": "Mild Steel angle iron for structural applications. Ideal for frameworks, supports, and braces.",
+    "features": [
+      "High strength-to-weight ratio",
+      "Versatile applications",
+      "Easy to weld and fabricate",
+      "Durable and long-lasting"
+    ],
+    "specifications": {
+      "Size": "25mm x 25mm x 3mm to 100mm x 100mm x 10mm",
+      "Length": "6 meters",
+      "Material": "Mild Steel",
+      "Finish": "Hot-dipped galvanized"
+    }
+  },
+  {
+    "id": 5,
+    "name": "River Sand",
+    "category": "Sand & Aggregates",
+    "category_id": "sand",
+    "price": "\u20B945/ton",
+    "image": "https://gachwala.in/wp-content/uploads/2023/09/RIVER-SAND-6.webp",
+    "description": "Natural river sand for concrete mixing, plastering, and masonry work. Free from impurities and clay content.",
+    "features": [
+      "Natural grain size distribution",
+      "Low silt content",
+      "Excellent workability",
+      "Better bonding with cement"
+    ],
+    "specifications": {
+      "Grain Size": "0.15mm to 4.75mm",
+      "Specific Gravity": "2.65",
+      "Silt Content": "< 3%",
+      "Moisture Content": "< 7%"
+    }
+  },
+  {
+    "id": 6,
+    "name": "M-Sand",
+    "category": "Sand & Aggregates",
+    "category_id": "sand",
+    "price": "\u20B940/ton",
+    "image": "https://img500.exportersindia.com/product_images/bc-500/2023/2/5449387/concrete-m-sand-1675676170-6749623.jpeg",
+    "description": "Manufactured sand (M-Sand) as an alternative to river sand. Produced by crushing hard granite stone.",
+    "features": [
+      "Consistent gradation",
+      "Zero impurities",
+      "Eco-friendly alternative to river sand",
+      "Better concrete strength"
+    ],
+    "specifications": {
+      "Grain Size": "0.15mm to 4.75mm",
+      "Specific Gravity": "2.70",
+      "Silt Content": "< 2%",
+      "Shape": "Cubical with rounded edges"
+    }
+  },
+  {
+    "id": 7,
+    "name": "Masonry Tools Set",
+    "category": "Hardware Items",
+    "category_id": "hardware",
+    "price": "\u20B9120/set",
+    "image": "https://5.imimg.com/data5/SELLER/Default/2024/1/380247982/ME/JO/BJ/37256826/masonry-tool-kit-500x500.jpg",
+    "description": "Complete set of professional masonry tools for construction work. Includes trowels, floats, levels, and more.",
+    "features": [
+      "Professional-grade tools",
+      "Ergonomic handles",
+      "Durable stainless steel",
+      "Complete set for all masonry needs"
+    ],
+    "specifications": {
+      "Number of Tools": "12 pieces",
+      "Material": "Stainless steel with rubber handles",
+      "Case": "Heavy-duty carrying case included",
+      "Weight": "5.5 kg"
+    }
+  },
+  {
+    "id": 8,
+    "name": "Power Tools Kit",
+    "category": "Hardware Items",
+    "category_id": "hardware",
+    "price": "\u20B9220/kit",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3EvLr946Gpjf4fVbDt8VeHtSZ_cCfE6Kg5Q&s",
+    "badge": "Limited",
+    "description": "Comprehensive power tools kit for construction and renovation projects. Includes drill, grinder, saw, and more.",
+    "features": [
+      "High-performance motors",
+      "Rechargeable lithium-ion batteries",
+      "Ergonomic design",
+      "Versatile applications"
+    ],
+    "specifications": {
+      "Number of Tools": "5 pieces",
+      "Power": "18V",
+      "Battery": "2 x 4.0Ah Li-ion",
+      "Warranty": "3 years"
+    }
+  },
+  {
+    "id": 9,
+    "name": "Ceramic Floor Tiles",
+    "category": "Tiles & Flooring",
+    "category_id": "tiles",
+    "price": "\u20B98/sq.ft",
+    "image": "https://i.ytimg.com/vi/dLrmEm5kCB4/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBRi1aawhT0oMqS-KSLChgo_uixmg",
+    "badge": "Sale",
+    "description": "Premium ceramic floor tiles with elegant designs. Suitable for living rooms, bedrooms, and kitchens.",
+    "features": ["Stain resistant", "Easy to clean", "Durable and long-lasting", "Wide range of designs"],
+    "specifications": {
+      "Size": "600mm x 600mm",
+      "Thickness": "9mm",
+      "Surface": "Matt finish",
+      "Water Absorption": "< 0.5%"
+    }
+  },
+  {
+    "id": 10,
+    "name": "Vitrified Tiles",
+    "category": "Tiles & Flooring",
+    "category_id": "tiles",
+    "price": "\u20B912/sq.ft",
+    "image": "https://images.jdmagicbox.com/rep/b2b/vitrified-floor-tile/vitrified-floor-tile-11.jpg",
+    "description": "High-quality vitrified tiles with marble-like appearance. Perfect for high-traffic areas.",
+    "features": ["Low water absorption", "Scratch resistant", "High gloss finish", "Uniform color throughout"],
+    "specifications": {
+      "Size": "800mm x 800mm",
+      "Thickness": "10mm",
+      "Surface": "Polished",
+      "Water Absorption": "< 0.1%"
+    }
+  },
+  {
+    "id": 11,
+    "name": "Kitchen Sink Mixer",
+    "category": "Tappees & Faucets",
+    "category_id": "tappees",
+    "price": "\u20B945/piece",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQwcaW78Z3zaPl25I4F-NHvrBUfQ_mCzh_ew&s",
+    "description": "Modern kitchen sink mixer with single-lever operation. Features a sleek design and durable construction.",
+    "features": ["Single-lever operation", "360° swivel spout", "Ceramic disc cartridge", "Chrome finish"],
+    "specifications": {
+      "Material": "Brass with chrome plating",
+      "Height": "350mm",
+      "Spout Reach": "220mm",
+      "Installation": "Deck mounted"
+    }
+  },
+  {
+    "id": 12,
+    "name": "Bathroom Faucet",
+    "category": "Tappees & Faucets",
+    "category_id": "tappees",
+    "price": "\u20B935/piece",
+    "image": "data:image/jpeg;base64,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",
+    "description": "Elegant bathroom faucet with water-saving technology. Perfect for modern bathrooms.",
+    "features": ["Water-saving aerator", "Smooth operation", "Drip-free performance", "Easy installation"],
+    "specifications": {
+      "Material": "Brass with chrome plating",
+      "Height": "150mm",
+      "Spout Reach": "120mm",
+      "Installation": "Single hole"
+    }
+  },
+  {
+    "id": 13,
+    "name": "Acrylic Bathtub",
+    "category": "Bath Tubs",
+    "category_id": "bathtubs",
+    "price": "\u20B9350/piece",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGYPA_m_qWpOsABc9-pA4DmVxCaXCsYx-lPQ&s",
+    "description": "Standard acrylic bathtub with sleek design. Provides comfort and durability for everyday use.",
+    "features": ["Lightweight yet durable", "Retains heat well", "Easy to clean", "Scratch resistant"],
+    "specifications": {
+      "Dimensions": "1700mm x 700mm x 400mm",
+      "Material": "Reinforced acrylic",
+      "Capacity": "230 liters",
+      "Weight": "25 kg"
+    }
+  },
+  {
+    "id": 14,
+    "name": "Luxury Bathtub",
+    "category": "Bath Tubs",
+    "category_id": "bathtubs",
+    "price": "\u20B9450/piece",
+    "image": "https://www.foamandbubbles.com/hs-fs/hubfs/Insane-baths-1.jpg?width=600&name=Insane-baths-1.jpg",
+    "badge": "Premium",
+    "description": "Luxury freestanding bathtub with modern design. The centerpiece for any premium bathroom.",
+    "features": [
+      "Freestanding design",
+      "Double-walled for better insulation",
+      "Adjustable feet for leveling",
+      "Overflow protection"
+    ],
+    "specifications": {
+      "Dimensions": "1800mm x 800mm x 600mm",
+      "Material": "Reinforced acrylic with fiberglass",
+      "Capacity": "280 liters",
+      "Weight": "40 kg"
+    }
+  },
+  {
+    "id": 15,
+    "name": "Jacuzzi Bathtub",
+    "category": "Bath Tubs",
+    "category_id": "bathtubs",
+    "price": "\u20B9850/piece",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtGQiY_h3KU0E__8eKY8cZh03LOpbSXCJAhg&s",
+    "description": "Premium jacuzzi bathtub with hydrotherapy jets. Perfect for relaxation and therapeutic benefits.",
+    "features": ["6 adjustable jets", "LED chromotherapy lighting", "Digital control panel", "Built-in heater"],
+    "specifications": {
+      "Dimensions": "1800mm x 900mm x 600mm",
+      "Material": "Acrylic with fiberglass reinforcement",
+      "Power": "1.5 HP pump",
+      "Jets": "6 hydrotherapy jets"
+    }
+  },
+  {
+    "id": 16,
+    "name": "Marble Flooring",
+    "category": "Tiles & Flooring",
+    "category_id": "tiles",
+    "price": "\u20B925/sq.ft",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRfdKqlKHwPnvHM0J9rDJqpaoTIj7VJHaU_Q&s",
+    "description": "Natural marble flooring tiles for luxurious interiors. Adds elegance and value to any space.",
+    "features": ["Natural stone beauty", "Unique patterns", "Increases property value", "Long-lasting durability"],
+    "specifications": {
+      "Size": "600mm x 600mm",
+      "Thickness": "18mm",
+      "Finish": "Polished",
+      "Origin": "Italian Carrara"
+    }
+  }
+]
+
